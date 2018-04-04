@@ -1,0 +1,12 @@
+<h1>{{'algo'}}</h1>
+<ul>
+{% for item in items %}
+<li><a href="/item/{{ item.id }}/">{{ item.description }}</a>
+    {% if item.done %}
+        <input type="checkbox" checked > 
+    {% else %}
+        <input type="checkbox">
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
